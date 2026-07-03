@@ -61,7 +61,7 @@ import {
 //    2. /public/Hassan_Abdullah_Resume.pdf     → your CV
 //  Until the photo exists, the site shows a clean "HA" monogram.
 // ================================================================
-const PHOTO_SRC = "/hassan1.png";
+const PHOTO_SRC = "/hassan123.png";
 const RESUME_URL = "/Hassan_Abdullah_Resume.pdf";
 
 // Programmatic smooth scrolling — more reliable than raw #hash links
@@ -241,8 +241,8 @@ const PROJECTS = [
     logoH: 1254,
     logoRound: true,
     tech: ["React.js", "Next.js"],
-    live: "https://github.com/abdullah3566",
-    liveLabel: "github.com/abdullah3566",
+    live: "https://hassan-portfolio-puce.vercel.app/",
+    liveLabel: "My Portfolio",
     points: ["This site — designed and built with reusable React components, deployed on Vercel."],
   },
   {
