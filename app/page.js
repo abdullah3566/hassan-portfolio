@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useForm, ValidationError } from "@formspree/react";
 import {
   ArrowUp,
   ArrowUpRight,
@@ -425,6 +426,57 @@ function TerminalCard() {
   );
 }
 
+const inputClasses =
+  "w-full rounded-xl border border-white/10 bg-neutral-950/60 px-4 py-2.5 text-sm text-white placeholder:text-neutral-500 outline-none transition-colors focus:border-orange-500/50";
+
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xnjloqlr");
+
+  if (state.succeeded) {
+    return (
+      <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5 text-center">
+        <p className="font-semibold text-emerald-300">Thanks for reaching out!</p>
+        <p className="mt-1 text-sm text-emerald-200/80">I'll get back to you soon.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <label htmlFor="name" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-neutral-400">
+          Name
+        </label>
+        <input id="name" type="text" name="name" required placeholder="Your name" className={inputClasses} />
+      </div>
+
+      <div>
+        <label htmlFor="email" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-neutral-400">
+          Email Address
+        </label>
+        <input id="email" type="email" name="email" required placeholder="you@example.com" className={inputClasses} />
+        <ValidationError prefix="Email" field="email" errors={state.errors} className="mt-1.5 text-xs text-red-400" />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-neutral-400">
+          Message
+        </label>
+        <textarea id="message" name="message" required rows={4} placeholder="What are you looking to build?" className={inputClasses + " resize-none"} />
+        <ValidationError prefix="Message" field="message" errors={state.errors} className="mt-1.5 text-xs text-red-400" />
+      </div>
+
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className="inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+      >
+        {state.submitting ? "Sending..." : "Send message"}
+      </button>
+    </form>
+  );
+}
+
 // ---------------------------------------------------------------- navbar
 function Navbar({ active }) {
   const [open, setOpen] = useState(false);
@@ -536,7 +588,7 @@ function Footer() {
   return (
     <footer className="relative overflow-hidden bg-neutral-950 text-neutral-300">
       <Image
-        src="/bg1.jfif"
+        src="/bg1.png"
         alt=""
         fill
         aria-hidden="true"
@@ -1183,13 +1235,11 @@ export default function Portfolio() {
                         <p className="flex items-center"><MapPin size={16} className="mr-2 shrink-0" /> Lahore, Pakistan</p>
                       </div>
 
+                      <div className="mt-6 border-t border-white/10 pt-6">
+                        <ContactForm />
+                      </div>
+
                       <div className="mt-6 flex flex-wrap gap-3">
-                        <a
-                          href="mailto:hassannabdullaho@gmail.com"
-                          className="inline-flex items-center rounded-full bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-orange-500"
-                        >
-                          <Mail size={16} className="mr-2" /> Email me
-                        </a>
                         <a
                           href={RESUME_URL}
                           target="_blank"
