@@ -97,9 +97,9 @@ const STATS = [
 
 const SKILLS = [
   {
-    group: "Core Stack (PERN)",
+    group: "Core Stack (PERN/MERN)",
     icon: Database,
-    items: ["PostgreSQL", "Express.js", "React.js", "Node.js", "REST APIs", "CRUD", "Authentication"],
+    items: ["PostgreSQL", "MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "CRUD", "Authentication"],
     core: true,
   },
   {
@@ -418,7 +418,7 @@ function TerminalCard() {
       </div>
       <div className="space-y-2 font-mono text-xs leading-relaxed sm:text-sm">
         <p><span className="text-neutral-500">const</span> <span className="text-cyan-300">developer</span> <span className="text-neutral-500">=</span> <span className="text-emerald-300">"Hassan Abdullah"</span>;</p>
-        <p><span className="text-neutral-500">stack</span>.<span className="text-orange-300">focus</span>() <span className="text-neutral-500">// PERN + Laravel</span></p>
+        <p><span className="text-neutral-500">stack</span>.<span className="text-orange-300">focus</span>() <span className="text-neutral-500">//  + Laravel</span></p>
         <p><span className="text-neutral-500">deploy</span>(<span className="text-emerald-300">"Vercel"</span>, <span className="text-emerald-300">"Railway"</span>);</p>
         <p><span className="text-neutral-500">status</span>: <span className="text-emerald-300">open_to_roles</span>;</p>
       </div>
@@ -631,7 +631,7 @@ function Footer() {
               <span>Hassan Abdullah</span>
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-neutral-400">
-              Junior Full-Stack Developer — PERN Stack Focus. I build web
+              Junior Full-Stack Developer —  Stack Focus. I build web
               applications and ship them to production.
             </p>
             <p className="mt-4 inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-xs text-emerald-300">
@@ -896,7 +896,7 @@ export default function Portfolio() {
 
                 <Reveal delay="200ms">
                   <p className="mt-8 max-w-lg text-base leading-relaxed text-neutral-400 sm:text-lg">
-                    I build production web applications with a growing focus on the PERN stack. Over the past year I've shipped backend modules and APIs for live platforms — right now I'm building
+                    I build production web applications with a growing focus on the  stack. Over the past year I've shipped backend modules and APIs for live platforms — right now I'm building
                     <span className="font-semibold text-white"> Lexisera</span>, an IELTS prep platform live on Vercel and Railway.
                   </p>
                 </Reveal>
@@ -985,7 +985,7 @@ export default function Portfolio() {
         <section id="about" className="relative scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-6xl">
             <SectionHeader eyebrow="about" title="A developer shaped by real products, not only coursework.">
-              Practical experience across Laravel/PHP, Django, React, and now a stronger PERN-stack direction.
+              Practical experience across Laravel/PHP, Django, React, and now a stronger -stack direction.
             </SectionHeader>
 
             <div className="grid gap-6 lg:grid-cols-12">
@@ -996,7 +996,7 @@ export default function Portfolio() {
                       I graduated with a BS in Computer Science from the University of the Punjab in 2026, but most of what I know about shipping software came from working on real products alongside my degree. At <span className="font-semibold text-white">Aurion Tech Global</span>, I spent close to a year on a live Laravel/PHP platform — writing backend modules and REST APIs, optimizing MySQL queries, and fixing the kind of production bugs you only meet when real users are involved.
                     </p>
                     <p>
-                      Before that, an internship at <span className="font-semibold text-white">Expert Soft Solutions</span> had me shipping Django and React features in a team workflow. These days my focus is the PERN stack. I am building <span className="font-semibold text-white">Lexisera</span>, an IELTS preparation platform — I designed the PostgreSQL schema, built REST APIs and role-based dashboards, and deployed it with the React frontend on Vercel and the Node.js/Express backend on Railway.
+                      Before that, an internship at <span className="font-semibold text-white">Expert Soft Solutions</span> had me shipping Django and React features in a team workflow. These days my focus is the  stack. I am building <span className="font-semibold text-white">Lexisera</span>, an IELTS preparation platform — I designed the PostgreSQL schema, built REST APIs and role-based dashboards, and deployed it with the React frontend on Vercel and the Node.js/Express backend on Railway.
                     </p>
                   </div>
                 </div>
@@ -1029,7 +1029,7 @@ export default function Portfolio() {
         <section id="skills" className="scroll-mt-24 px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-6xl">
             <SectionHeader eyebrow="skills" title="A practical toolkit for modern full-stack work.">
-              Clear PERN-stack focus, with useful experience in Laravel, Django, Flutter, and deployment workflows.
+              Clear -stack focus, with useful experience in Laravel, Django, Flutter, and deployment workflows.
             </SectionHeader>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
